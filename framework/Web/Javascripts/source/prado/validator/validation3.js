@@ -28,14 +28,14 @@
  * <p>Usage example: adding a required field to a text box input with
  * ID "input1" in a form with ID "form1".</p>
  * <pre>
- * &lt;script type="text/javascript" src="../prado.js"&gt;&lt;/script&gt;
- * &lt;script type="text/javascript" src="../validator.js"&gt;&lt;/script&gt;
+ * &lt;script src="../prado.js"&gt;&lt;/script&gt;
+ * &lt;script src="../validator.js"&gt;&lt;/script&gt;
  * &lt;form id="form1" action="..."&gt;
  * &lt;div&gt;
  * 	&lt;input type="text" id="input1" /&gt;
  *  &lt;span id="validator1" style="display:none; color:red"&gt;*&lt;/span&gt;
  *  &lt;input type="submit text="submit" /&gt;
- * &lt;script type="text/javascript"&gt;
+ * &lt;script&gt;
  * new Prado.ValidationManager({FormID : 'form1'});
  * var options =
  * {
@@ -1522,7 +1522,7 @@ Prado.WebUI.TCompareValidator = jQuery.klass(Prado.WebUI.TBaseValidator,
  * The function should have the following signature:</p>
  *
  * <pre>
- * &lt;script type="text/javascript"&gt;
+ * &lt;script&gt;
  * function ValidationFunctionName(sender, parameter)
  * {
  *    if(parameter == ...)

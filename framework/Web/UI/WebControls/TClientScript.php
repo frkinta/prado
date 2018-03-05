@@ -138,7 +138,7 @@ class TClientScript extends \Prado\Web\UI\TControl
 	protected function renderCustomScriptFile($writer)
 	{
 		if(($scriptUrl = $this->getScriptUrl())!=='')
-			$writer->write("<script type=\"text/javascript\" src=\"$scriptUrl\"></script>\n");
+			$writer->write("<script src=\"$scriptUrl\"></script>\n");
 	}
 
 	/**
@@ -149,7 +149,7 @@ class TClientScript extends \Prado\Web\UI\TControl
 	{
 		if($this->getHasControls())
 		{
-			$writer->write("<script type=\"text/javascript\">\n/*<![CDATA[*/\n");
+			$writer->write("<script>\n/*<![CDATA[*/\n");
 			$this->renderChildren($writer);
 			$writer->write("\n/*]]>*/\n</script>\n");
 		}

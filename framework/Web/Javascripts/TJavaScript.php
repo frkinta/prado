@@ -45,7 +45,7 @@ class TJavaScript
 	 */
 	public static function renderScriptFile($file)
 	{
-		return '<script type="text/javascript" src="'.THttpUtility::htmlEncode($file)."\"></script>\n";
+		return '<script src="'.THttpUtility::htmlEncode($file)."\"></script>\n";
 	}
 
 	/**
@@ -56,7 +56,7 @@ class TJavaScript
 	public static function renderScriptBlocks($scripts)
 	{
 		if(count($scripts))
-			return "<script type=\"text/javascript\">\n/*<![CDATA[*/\n".implode("\n",$scripts)."\n/*]]>*/\n</script>\n";
+			return "<script>\n/*<![CDATA[*/\n".implode("\n",$scripts)."\n/*]]>*/\n</script>\n";
 		else
 			return '';
 	}
@@ -81,7 +81,7 @@ class TJavaScript
 	 */
 	public static function renderScriptBlock($script)
 	{
-		return "<script type=\"text/javascript\">\n/*<![CDATA[*/\n{$script}\n/*]]>*/\n</script>\n";
+		return "<script>\n/*<![CDATA[*/\n{$script}\n/*]]>*/\n</script>\n";
 	}
 
 	/**
